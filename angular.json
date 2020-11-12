@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "configurableModules"
+    }
+  },
+  "defaultProject": "configurableModules",
+  "cli": {
+    "analytics": false
+  }
 }

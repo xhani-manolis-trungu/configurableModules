@@ -1,5 +1,6 @@
-import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+
+import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,7 +11,12 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('configurableModules app is running!');
+    expect(page.getTitleText()).toEqual(`App Component`);
+  });
+
+  it('should display body', () => {
+    page.navigateTo();
+    expect(page.getBodyText()).toBeTruthy();
   });
 
   afterEach(async () => {

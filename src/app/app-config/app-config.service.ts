@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { rejects } from 'assert';
-import { AppConfigTokenService } from './app-config/app-config-token.service';
+import { AppConfigTokenService } from './app-config-token.service';
 
 
 @Injectable()
@@ -29,7 +29,8 @@ export class AppConfigService {
     createClient: function createClient({ id, accessToken }): any[] {
       if ((id && accessToken) && (id !== null && accessToken !== null)) {
         if (id !== '1') {
-          let articles = [
+          // tslint:disable-next-line: no-shadowed-variable
+          const articles = [
             {
               title: 'Hello world in JS',
               content: `LDfjsadl;kjfae;lkjdaslfj sfadl;j;aldskjfsadl;kj fsdalfj;adslkjfad;s`
@@ -45,6 +46,7 @@ export class AppConfigService {
           ];
           return articles;
         }
+        // tslint:disable-next-line: prefer-const
         let articles = [
           {
             title: 'Hello world in JS',
@@ -86,7 +88,7 @@ export class AppConfigService {
         return this.resultsArray;
       });
     } else {
-      return Promise.reject(new Error('Something went wrong with your type requested'))
+      return Promise.reject(new Error('Something went wrong with your type requested'));
     }
 
   }

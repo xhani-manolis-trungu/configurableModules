@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppConfigService } from './app-config.service';
+import { AppConfigService } from './app-config/app-config.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { AppConfigService } from './app-config.service';
 export class AppComponent implements OnInit {
 
   public items = [];
-  title = 'configurableModules';
+  title = 'App Component';
 
   constructor(public contentful: AppConfigService) {
 

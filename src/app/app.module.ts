@@ -1,6 +1,7 @@
 import { AppComponent } from './app.component';
 import { AppConfigModule } from './app-config/app-config.module';
-import { AppConfigService } from './app-config.service';
+import { AppConfigService } from './app-config/app-config.service';
+import { AppConfigTokenService } from './app-config/app-config-token.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { DefaultConfig } from './app-config/model/config';

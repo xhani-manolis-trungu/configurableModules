@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
+import { AppConfigService } from './app-config/app-config.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,6 +13,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [AppConfigService]
     }).compileComponents();
   }));
 
